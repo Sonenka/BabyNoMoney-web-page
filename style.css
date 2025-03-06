@@ -50,6 +50,7 @@ a {
   color: #ffffff;
   background-color: transparent;
   cursor: pointer;
+  text-transform: uppercase;
 }
 
 .header {
@@ -99,6 +100,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 section {
@@ -191,6 +193,30 @@ h2 {
 #slider__button_prev {
   background-image: url(/img/slider__button_prev.svg);
 }
+
 #slider__button_next {
   background-image: url(img/slider__button_next.svg);
 } 
+
+.bio {
+  background-image: url(/img/bio__background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  background-color: black;
+  background-attachment: fixed ;
+}
+
+.bio__info {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+}
+
+.bio__h2 {
+  color: #ffffff;
+}
