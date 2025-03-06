@@ -1,4 +1,4 @@
-export const slides = [
+export const songs = [
     { image: "/img/covers/Antidepressants.jpg", text: "Antidepressants" },
     { image: "/img/covers/Check.jpg", text: "Check" },
     { image: "/img/covers/Meant to Be.jpg", text: "Meant to Be" },
@@ -32,4 +32,22 @@ export const slides = [
     { image: "/img/covers/Shining on My Ex.jpg", text: "Shining on My Ex" },
     { image: "/img/covers/Slop.jpg", text: "Slop" },
     { image: "/img/covers/Lalala.jpg", text: "Lalala" }
+];
+
+export const videos = [
+    {
+        image: "https://img.youtube.com/vi/FmlGo1KY2jE/maxresdefault.jpg",
+        video: "https://rutube.ru/play/embed/da49347fc8cae13384ce05f9ab93a555/",
+        title: "Antidepressant"
+    },
+    {
+        image: "https://img.youtube.com/vi/3JZ_D3ELwOQ/maxresdefault.jpg",
+        video: "https://www.youtube.com/embed/3JZ_D3ELwOQ",
+        title: "Relaxing Vibes"
+    },
+    {
+        image: "https://img.youtube.com/vi/tgbNymZ7vqY/maxresdefault.jpg",
+        video: "https://www.youtube.com/embed/tgbNymZ7vqY",
+        title: "Morning Energy"
+    },
 ];
