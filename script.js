@@ -105,3 +105,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
     updateSlides();
 });
+
+let currentSection = 0;
+const sections = document.querySelectorAll('.section');
+let isScrolling = false; // Флаг блокировки повторного скролла
+
+window.addEventListener('wheel', (e) => {
+    if (isScrolling) return; // Если уже идет анимация - игнорируем новый скролл
+    isScrolling = true;
+
+    if (e.deltaY > 0 && currentSection < sections.length - 1) {
+        currentSection++;
+    } else if (e.deltaY < 0 && currentSection > 0) {
+        currentSection--;
+    }
+
+    sections[currentSection].scrollIntoView({ behavior: 'smooth' });
+
+    setTimeout(() => {
+        isScrolling = false; // Разрешаем следующий скролл через 800 мс
+    }, 800);
+});

@@ -7,9 +7,10 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link href="//fonts.googleapis.com/earlyaccess/jejuhallasan.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <header class="header">
+    <header class="header section">
         <nav class="header__menu">
             <div class="menu"></div>
                 <ul class="menu__ul">
@@ -31,7 +32,7 @@
     </header>
     
     <main class="main">
-        <section class="music">
+        <section class="music section">
             <h2 class="music__h2 h2">Music</h2>
             <div class="music__slider">
               <div class="slider">
@@ -42,14 +43,14 @@
             </div>
         </section>
 
-        <section class="bio">
+        <section class="bio section">
             <div class="bio__info">
                 <h2 class="bio__h2">Want to know more?</h2>
                 <button class="button bio__button">Read bio</button>
             </div>
         </section>
 
-        <section class="video">
+        <section class="video section">
             <h2 class="video__h2 h2">Video</h2>
             <div class="video__slider">
               <div class="slider">
@@ -58,11 +59,30 @@
                 <button id="video__button_next" class="slider__button video__button_next" aria-label="Next Slide"></button>
               </div>
             </div>
-        </section>
+        </section>  
     </main>
+
+    <footer class="footer section">
+        <div class="links">
+            <a href="https://www.youtube.com/channel/UCC8FSfSnbjiZ6vGr68ZLtzg">
+                <i class="fa-brands fa-youtube"></i>
+            </a>
+            <a href="https://www.instagram.com/bbnomula/">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/bbnomula">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="https://www.tiktok.com/@bbnotiktok?lang=en">
+                <i class="fa-brands fa-tiktok"></i>
+            </a>
+        </div>
+        <div class="footer__copy">Made by <a href="https://github.com/Sonenka">Sonenka</a></div>
+    </footer>
 
 
     <script type="module" src="script.js"></script>
     <script src="script.js"></script>
+    <script type="module" src="slides.js"></script>
 </body>
 </html>
