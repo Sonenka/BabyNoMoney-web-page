@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             slideDiv.querySelector(".video__video").addEventListener("click", function () {
                 slideDiv.innerHTML = `
-                    <iframe width="960" height="540" src="${videos[slideIndex].video}?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe class="video__iframe" width="960" height="540" src="${videos[slideIndex].video}?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 `;
             });
 
