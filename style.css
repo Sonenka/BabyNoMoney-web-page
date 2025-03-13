@@ -21,6 +21,11 @@ button {
   --secondary-font-family: 'jeju hallasan', sans-serif;
   --light-pink: #FFEAF3;
   --brown: #644C30;
+
+  --music-columns: 3;
+
+  --video-height: 540px;
+  --video-width: 960px;
 }
 
 html,
@@ -66,9 +71,10 @@ a:visited {
 }
 
 .header {
-  background-image: url(/img/header__background1.jpg);
+  background-image: url(/img/header__background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -79,6 +85,7 @@ a:visited {
 
 .header__h1 {
   font-size: 128px;
+  text-align: center;
 }
 
 .header__menu {
@@ -187,12 +194,14 @@ h2 {
   color: var(--brown);
 }
 
-.music__button {
+.music__button,
+.video__button_more {
   border-color: var(--brown);
   color: var(--brown);
 }
 
-.music__button:hover {
+.music__button:hover,
+.video__button_more:hover {
   background-color: var(--brown);
   color: var(--light-pink);
 }
@@ -217,6 +226,7 @@ h2 {
   background-image: url(/img/bio__background.png);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   width: 100%;
   background-color: black;
   background-attachment: fixed;
@@ -254,8 +264,8 @@ h2 {
 }
 
 .video__item {
-  width: 960px;
-  height: 540px;
+  width: var(--video-width);
+  height: var(--video-height);
   border-radius: 5px;
 }
 
@@ -304,6 +314,10 @@ h2 {
   color: var(--light-pink);
 }
 
+.video__button_more {
+  display: none;
+}
+
 .footer {
   height: 80px;
   font-size: 24px;
@@ -325,10 +339,58 @@ i {
   gap: 10px;
 }
 
-.links___link {
-
+.footer__copy {
+  text-align: right;
 }
 
-.footer__copy {
+@media screen and (max-width: 1440px) {
+  :root {
+    --music-columns: 1;
+
+    --video-height: 480px;
+    --video-width: 854px;
+  }
+
+  .bio {
+    background-image: url(img/bio__small.jpg);
+    background-position: right;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  :root {
+    --music-columns: 1;
+
+    --video-height: 360px;
+    --video-width: 640px;
+  }
+
+  .slider {
+    gap: 15px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  :root {
+    --music-columns: 1;
+  }
+
+  .header {
+    background-image: url(img/header__small.jpg);
+  }
+
+  .bio {
+    background-image: url(img/bio__5xs.jpg);
+    background-position: center;
+    align-items: center;
+  }
+
+  .video__button_more {
+    display: block;
+  }
+
+  .video__button {
+    display: none;
+  }
 
 }

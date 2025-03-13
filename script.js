@@ -3,7 +3,8 @@ import { videos } from "./slides.js";
 
 document.addEventListener("DOMContentLoaded", function () {
     let index = 0;
-    const slidesToShow = 3;
+    const slidesToShow = getComputedStyle(document.documentElement).getPropertyValue('--music-columns').trim();
+    console.log(slidesToShow);
     const sliderWrapper = document.getElementById("music__wrapper");
     const prevButton = document.getElementById("music__button_prev");
     const nextButton = document.getElementById("music__button_next");
@@ -24,7 +25,6 @@ document.addEventListener("DOMContentLoaded", function () {
                   <img src="${songs[slideIndex].image}" alt="Slide" class="music__image">
                   <p class="music__title">${songs[slideIndex].text}</p>
                 </div>
-                <button class="music__button button">LISTEN NOW</button>
             `;
             sliderWrapper.appendChild(slideDiv);
         }
@@ -50,29 +50,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const prevButton = document.getElementById("video__button_prev");
     const nextButton = document.getElementById("video__button_next");
 
-    const slides = [
-        {
-            image: "https://img.youtube.com/vi/FmlGo1KY2jE/maxresdefault.jpg",
-            video: "https://www.youtube.com/embed/FmlGo1KY2jE",
-            title: "Antidepressant"
-        },
-        {
-            image: "https://img.youtube.com/vi/3JZ_D3ELwOQ/maxresdefault.jpg",
-            video: "https://www.youtube.com/embed/3JZ_D3ELwOQ",
-            title: "Relaxing Vibes"
-        },
-        {
-            image: "https://img.youtube.com/vi/tgbNymZ7vqY/maxresdefault.jpg",
-            video: "https://www.youtube.com/embed/tgbNymZ7vqY",
-            title: "Morning Energy"
-        },
-    ];
-
     function updateSlides() {
         sliderWrapper.innerHTML = "";
         for (let i = 0; i < slidesToShow; i++) {
             const slideIndex = (index + i) % videos.length;
             const slideDiv = document.createElement("div");
+            const video__width = getComputedStyle(document.documentElement).getPropertyValue('--video-width').trim();
+            const video__height = getComputedStyle(document.documentElement).getPropertyValue('--video-height').trim();
             slideDiv.classList.add("video__item");
 
             slideDiv.innerHTML = `
@@ -85,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             slideDiv.querySelector(".video__video").addEventListener("click", function () {
                 slideDiv.innerHTML = `
-                    <iframe class="video__iframe" width="960" height="540" src="${videos[slideIndex].video}?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe class="video__iframe" width="${video__width}" height="${video__height}" src="${videos[slideIndex].video}?autoplay=true" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 `;
             });
 
@@ -106,23 +90,23 @@ document.addEventListener("DOMContentLoaded", function () {
     updateSlides();
 });
 
-let currentSection = 0;
-const sections = document.querySelectorAll('.section');
-let isScrolling = false; // Флаг блокировки повторного скролла
+// let currentSection = 0;
+// const sections = document.querySelectorAll('.section');
+// let isScrolling = false; 
 
-window.addEventListener('wheel', (e) => {
-    if (isScrolling) return; // Если уже идет анимация - игнорируем новый скролл
-    isScrolling = true;
+// window.addEventListener('wheel', (e) => {
+//     if (isScrolling) return;
+//     isScrolling = true;
 
-    if (e.deltaY > 0 && currentSection < sections.length - 1) {
-        currentSection++;
-    } else if (e.deltaY < 0 && currentSection > 0) {
-        currentSection--;
-    }
+//     if (e.deltaY > 0 && currentSection < sections.length - 1) {
+//         currentSection++;
+//     } else if (e.deltaY < 0 && currentSection > 0) {
+//         currentSection--;
+//     }
 
-    sections[currentSection].scrollIntoView({ behavior: 'smooth' });
+//     sections[currentSection].scrollIntoView({ behavior: 'smooth' });
 
-    setTimeout(() => {
-        isScrolling = false; // Разрешаем следующий скролл через 800 мс
-    }, 800);
-});
+//     setTimeout(() => {
+//         isScrolling = false; // Разрешаем следующий скролл через 800 мс
+//     }, 800);
+// });

@@ -12,77 +12,75 @@
 <body>
     <header class="header section">
         <nav class="header__menu">
-            <div class="menu"></div>
-                <ul class="menu__ul">
-                    <li class="menu__li">
-                        <a href="#" class="menu__a menu__a--active" aria-current="page">Home</a>
-                    </li>
-                    <li class="menu__li">
-                        <a href="#" class="menu__a">Music</a>
-                    </li>
-                    <li class="menu__li">
-                        <a href="#" class="menu__a">Videos</a>
-                    </li>
-                    <li class="menu__li">
-                        <a href="#" class="menu__a">About</a>
-                    </li>
-                </ul>
+            <ul class="menu__ul">
+                <li class="menu__li">
+                    <a href="#" class="menu__a menu__a--active" aria-current="page">Home</a>
+                </li>
+                <li class="menu__li">
+                    <a href="#music" class="menu__a">Music</a>
+                </li>
+                <li class="menu__li">
+                    <a href="#videos" class="menu__a">Videos</a>
+                </li>
+                <li class="menu__li">
+                    <a href="#bio" class="menu__a">About</a>
+                </li>
+            </ul>
         </nav>
         <h1 class="header__h1 h1">It's baby no money...</h1>
     </header>
     
     <main class="main">
-        <section class="music section">
+        <section class="music section" id="music">
             <h2 class="music__h2 h2">Music</h2>
             <div class="music__slider">
-              <div class="slider">
-                <button id="music__button_prev" class="slider__button music__button_prev" aria-label="Previous Slide"></button>
-                  <div id="music__wrapper" class="music__wrapper"></div>
-                <button id="music__button_next" class="slider__button music__button_next" aria-label="Next Slide"></button>
-              </div>
+                <div class="slider">
+                    <button id="music__button_prev" class="slider__button music__button_prev" aria-label="Previous Slide"></button>
+                    <div id="music__wrapper" class="music__wrapper" aria-live="polite"></div>
+                    <button id="music__button_next" class="slider__button music__button_next" aria-label="Next Slide"></button>
+                </div>
             </div>
+            <button class="music__button button">LISTEN NOW</button>
         </section>
 
-        <section class="bio section">
+        <section class="bio section" id="bio">
             <div class="bio__info">
                 <h2 class="bio__h2">Want to know more?</h2>
                 <button class="button bio__button">Read bio</button>
             </div>
         </section>
 
-        <section class="video section">
-            <h2 class="video__h2 h2">Video</h2>
+        <section class="video section" id="videos">
+            <h2 class="video__h2 h2">Videos</h2>
             <div class="video__slider">
-              <div class="slider">
-                <button id="video__button_prev" class="slider__button video__button_prev" aria-label="Previous Slide"></button>
-                  <div id="video__wrapper" class="video__wrapper"></div>
-                <button id="video__button_next" class="slider__button video__button_next" aria-label="Next Slide"></button>
-              </div>
+                <div class="slider">
+                    <button id="video__button_prev" class="slider__button video__button_prev video__button" aria-label="Previous Slide"></button>
+                    <div id="video__wrapper" class="video__wrapper" aria-live="polite"></div>
+                    <button id="video__button_next" class="slider__button video__button_next video__button" aria-label="Next Slide"></button>
+                </div>
             </div>
+            <button class="button video__button_more">Watch more</button>
         </section>  
     </main>
 
     <footer class="footer section">
         <div class="links">
-            <a href="https://www.youtube.com/channel/UCC8FSfSnbjiZ6vGr68ZLtzg">
+            <a href="https://www.youtube.com/channel/UCC8FSfSnbjiZ6vGr68ZLtzg" aria-label="YouTube">
                 <i class="fa-brands fa-youtube"></i>
             </a>
-            <a href="https://www.instagram.com/bbnomula/">
+            <a href="https://www.instagram.com/bbnomula/" aria-label="Instagram">
                 <i class="fa-brands fa-instagram"></i>
             </a>
-            <a href="https://www.facebook.com/bbnomula">
+            <a href="https://www.facebook.com/bbnomula" aria-label="Facebook">
                 <i class="fa-brands fa-facebook"></i>
             </a>
-            <a href="https://www.tiktok.com/@bbnotiktok?lang=en">
+            <a href="https://www.tiktok.com/@bbnotiktok?lang=en" aria-label="TikTok">
                 <i class="fa-brands fa-tiktok"></i>
             </a>
         </div>
         <div class="footer__copy">Made by <a href="https://github.com/Sonenka">Sonenka</a></div>
     </footer>
 
-
     <script type="module" src="script.js"></script>
-    <script src="script.js"></script>
-    <script type="module" src="slides.js"></script>
 </body>
 </html>
