@@ -1,3 +1,4 @@
+/* Стандартные стили для всех устройств */
 *,
 *::before,
 *::after {
@@ -36,7 +37,6 @@ button {
 html,
 body {
   font-family: var(--primary-font-family);
-  
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
@@ -103,7 +103,6 @@ a:visited {
 
 .menu__li {
   list-style-type: none;
-
 }
 
 .menu__a {
@@ -213,12 +212,12 @@ h2 {
   color: var(--brown);
 }
 
-.music__button{
+.music__button {
   border-color: var(--brown);
   color: var(--brown);
 }
 
-.music__button:hover{
+.music__button:hover {
   background-color: var(--brown);
   color: var(--light-pink);
 }
@@ -233,8 +232,6 @@ h2 {
 .music__button_prev {
   background-image: url(/img/slider__button_prev.svg);
 }
-
-
 
 .video__button_next,
 .music__button_next {
@@ -256,7 +253,7 @@ h2 {
 }
 
 .video__mobile_next {
-  background-image: url(/img/mobile_arrow_next.svg)
+  background-image: url(/img/mobile_arrow_next.svg);
 }
 
 .music__iframe {
@@ -390,6 +387,8 @@ i {
   text-align: right;
 }
 
+/* Адаптивность */
+
 @media screen and (max-width: 1440px) {
   :root {
     --music-columns: 2;
@@ -405,7 +404,7 @@ i {
       -1px -1px 0 var(--grey),  
        1px -1px 0 var(--grey),
       -1px  1px 0 var(--grey),
-       1px  1px 0 var(--grey); /* Тени вокруг текста */
+       1px  1px 0 var(--grey); 
   }
 
   .bio__button {
@@ -419,7 +418,13 @@ i {
   .bio__button-wrapper {
     border: 1px solid var(--grey);
   }
+
+  h1 {
+    font-size: 96px; 
+  }
+
 }
+  
 
 @media screen and (max-width: 1024px) {
   :root {
@@ -432,12 +437,24 @@ i {
   .slider {
     gap: 15px;
   }
-}
 
+  h1 {
+    font-size: 80px;
+  }
+}
+  
+  
 @media screen and (max-width: 980px) {
   :root {
     --music-columns: 1;
   }
+
+  h1 {
+    font-size: 64px;
+  }
+
+
+
 }
 
 @media screen and (max-width: 768px) {
@@ -455,20 +472,8 @@ i {
     align-items: center;
   }
 
-  .video__button_more {
-    display: block;
-  }
-
-  .bio {
-    text-shadow: none;
-  }
-
-  .bio__button {
-    text-shadow: none;
-  }
-
-  .bio__button-wrapper {
-    border: none;
+  h1 {
+    font-size: 48px; /
   }
 
   .video__slider-button {
@@ -478,5 +483,7 @@ i {
   .video__mobile-controll {
     display: flex;
   }
+  
 
+  
 }
