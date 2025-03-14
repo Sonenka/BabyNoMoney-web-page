@@ -67,8 +67,8 @@ document.addEventListener("DOMContentLoaded", function () {
     let index = 0;
     const slidesToShow = 1;
     const sliderWrapper = document.getElementById("video__wrapper");
-    const prevButtons = document.querySelectorAll(".video__controll_prev"); // Объединяем все кнопки "назад"
-    const nextButtons = document.querySelectorAll(".video__controll_next"); // Объединяем все кнопки "вперёд"
+    const prevButtons = document.querySelectorAll(".video__controll_prev");
+    const nextButtons = document.querySelectorAll(".video__controll_next");
 
     function updateSlides() {
         sliderWrapper.innerHTML = "";
