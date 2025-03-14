@@ -48,7 +48,6 @@ body {
 a,
 a:visited {
   text-decoration: none;
-  color: var(--light-pink);
 }
 
 .h1 {
@@ -94,6 +93,44 @@ a:visited {
 .header__menu {
   position: absolute;
   top: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.menu__toggle {
+  display: none; /* Скрываем кнопку по умолчанию */
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.menu__icon {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: var(--absolute-white);
+  position: relative;
+}
+
+.menu__icon::before,
+.menu__icon::after {
+  content: '';
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: var(--absolute-white);
+  position: absolute;
+  transition: transform 0.3s ease;
+}
+
+.menu__icon::before {
+  transform: translateY(-8px);
+}
+
+.menu__icon::after {
+  transform: translateY(8px);
 }
 
 .menu__ul {
@@ -110,10 +147,6 @@ a:visited {
   font-size: 24px;
   text-transform: uppercase;
   color: var(--absolute-white);
-}
-
-.menu__a--active {
-  border-bottom: 2px var(--absolute-white) solid;
 }
 
 main {
@@ -484,5 +517,29 @@ i {
     display: flex;
   }
   
-  
+  .menu__toggle {
+    display: block;
+  }
+
+  .menu__ul {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      position: absolute;
+      gap: 30px;
+      top: 60px;
+      left: 50%;
+      background-color: var(--light-pink);
+      transform: translate(-50%, 0%);
+      padding: 10px 30px;
+      border-radius: 30px;
+  }
+
+  .menu__ul--open {
+      display: flex;
+  }
+
+  .menu__a {
+    color: var(--brown);
+  }
 }

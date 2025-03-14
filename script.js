@@ -152,3 +152,13 @@ document.addEventListener("DOMContentLoaded", function () {
     addSwipeSupport();
     updateSlides();
 });
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const toggleButton = document.querySelector('.menu__toggle');
+    const menu = document.querySelector('.menu__ul');
+
+    toggleButton.addEventListener('click', function () {
+        menu.classList.toggle('menu__ul--open');
+    });
+});

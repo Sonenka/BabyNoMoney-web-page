@@ -1,131 +1,131 @@
 export const songs = [
     {
-        image: "/img/covers/songs/Antidepressants.jpg",
+        image: "../img/covers/songs/Antidepressants.jpg",
         text: "Antidepressants",
         link: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2042481008&color=%23644c30&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
     },
     {
-        image: "/img/covers/songs/Check.jpg",
+        image: "../img/covers/songs/Check.jpg",
         text: "Check",
         link: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1978230163&color=%23644c30&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
     },
     {
-        image: "/img/covers/songs/Meant to Be.jpg",
+        image: "../img/covers/songs/Meant to Be.jpg",
         text: "Meant to Be",
         link: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1942177127&color=%23644c30&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
     },
     {
-        image: "/img/covers/songs/Two.png",
+        image: "../img/covers/songs/Two.png",
         text: "Two",
         link: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1904297543&color=%23644c30&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
     },
     {
-        image: "/img/covers/songs/Goodness Gracious.jpg",
+        image: "../img/covers/songs/Goodness Gracious.jpg",
         text: "Goodness Gracious",
         link: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1593937131&color=%23644c30&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
     },
     {
-        image: "/img/covers/songs/Still.jpg",
+        image: "../img/covers/songs/Still.jpg",
         text: "Still",
         link: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1447554793&color=%23644c30&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
     },
     {
-        image: "/img/covers/songs/Touch Grass.jpg",
+        image: "../img/covers/songs/Touch Grass.jpg",
         text: "Touch Grass",
         link: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1593936999&color=%23644c30&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
     },
     {
-        image: "/img/covers/songs/Sophisticated.jpg",
+        image: "../img/covers/songs/Sophisticated.jpg",
         text: "Sophisticated",
         link: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1326002371&color=%23644c30&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
     },
     {
-        image: "/img/covers/songs/Yoga.jpg",
+        image: "../img/covers/songs/Yoga.jpg",
         text: "Yoga",
         link: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1135936912&color=%23644c30&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
     },
     {
-        image: "/img/covers/songs/Edamame.jpg",
+        image: "../img/covers/songs/Edamame.jpg",
         text: "Edamame",
         link: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1090302697&color=%23644c30&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
     },
     {
-        image: "/img/covers/songs/Wussup.jpg",
+        image: "../img/covers/songs/Wussup.jpg",
         text: "Wussup",
         link: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1069118431&color=%23644c30&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
     },
     {
-        image: "/img/covers/songs/Bad to the Bone.jpg",
+        image: "../img/covers/songs/Bad to the Bone.jpg",
         text: "Bad to the Bone",
         link: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1010921368&color=%23644c30&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
     },
     {
-        image: "/img/covers/songs/Help Herself.jpg",
+        image: "../img/covers/songs/Help Herself.jpg",
         text: "Help Herself",
         link: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/964354177&color=%23644c30&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
     },
     {
-        image: "/img/covers/songs/Backwards.jpg",
+        image: "../img/covers/songs/Backwards.jpg",
         text: "Backwards",
         link: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/895142791&color=%23644c30&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
     },
     {
-        image: "/img/covers/songs/Imma.jpg",
+        image: "../img/covers/songs/Imma.jpg",
         text: "Imma",
         link: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/882399439&color=%23644c30&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
     },
     {
-        image: "/img/covers/songs/Jack Money Bean.jpg",
+        image: "../img/covers/songs/Jack Money Bean.jpg",
         text: "Jack Money Bean",
         link: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/874657369&color=%23644c30&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
     },
     {
-        image: "/img/covers/songs/Astrology.jpg",
+        image: "../img/covers/songs/Astrology.jpg",
         text: "Astrology",
         link: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/850574377&color=%23644c30&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
     },
     {
-        image: "/img/covers/songs/What Would Baby Do.jpg",
+        image: "../img/covers/songs/What Would Baby Do.jpg",
         text: "What Would Baby Do?",
         link: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/800094337&color=%23644c30&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
     },
     {
-        image: "/img/covers/songs/Quarantine Freestyle.jpg",
+        image: "../img/covers/songs/Quarantine Freestyle.jpg",
         text: "Quarantine Freestyle",
         link: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/787687255&color=%23644c30&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
     },
     {
-        image: "/img/covers/songs/Mememe.jpg",
+        image: "../img/covers/songs/Mememe.jpg",
         text: "Mememe",
         link: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/775629709&color=%23644c30&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
     },
     {
-        image: "/img/covers/songs/Off the Goop.jpg",
+        image: "../img/covers/songs/Off the Goop.jpg",
         text: "Off the Goop",
         link: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/756766039&color=%23644c30&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
     },
     {
-        image: "/img/covers/songs/Welcome to Chilis.jpg",
+        image: "../img/covers/songs/Welcome to Chilis.jpg",
         text: "Welcome to Chilis",
         link: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/742940407&color=%23644c30&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
     },
     {
-        image: "/img/covers/songs/Iunno.jpg",
+        image: "../img/covers/songs/Iunno.jpg",
         text: "Iunno",
         link: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/720575872&color=%23644c30&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
     },
     {
-        image: "/img/covers/songs/Shining on My Ex.jpg",
+        image: "../img/covers/songs/Shining on My Ex.jpg",
         text: "Shining on My Ex",
         link: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/699105253&color=%23644c30&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
     },
     {
-        image: "/img/covers/songs/Slop.jpg",
+        image: "../img/covers/songs/Slop.jpg",
         text: "Slop",
         link: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/694686676&color=%23644c30&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
     },
     {
-        image: "/img/covers/songs/Lalala.jpg",
+        image: "../img/covers/songs/Lalala.jpg",
         text: "Lalala",
         link: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/633309999&color=%23644c30&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
     }
