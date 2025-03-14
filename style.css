@@ -74,7 +74,7 @@ a:visited {
 }
 
 .header {
-  background-image: url(/img/header__background.jpg);
+  background-image: url(../img/header__background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -194,7 +194,7 @@ h2 {
   left: 50%;
   height: 48px;
   width: 48px;
-  background-image: url(/img/play-icon1.svg);
+  background-image: url(../img/play-icon1.svg);
   background-size: cover;
 }
 
@@ -230,12 +230,12 @@ h2 {
 
 .video__button_prev,
 .music__button_prev {
-  background-image: url(/img/slider__button_prev.svg);
+  background-image: url(../img/slider__button_prev.svg);
 }
 
 .video__button_next,
 .music__button_next {
-  background-image: url(img/slider__button_next.svg);
+  background-image: url(../img/slider__button_next.svg);
 }
 
 .video__mobile-controll {
@@ -249,11 +249,11 @@ h2 {
 }
 
 .video__mobile_prev {
-  background-image: url(/img/mobile_arrow_prev.svg);
+  background-image: url(../img/mobile_arrow_prev.svg);
 }
 
 .video__mobile_next {
-  background-image: url(/img/mobile_arrow_next.svg);
+  background-image: url(../img/mobile_arrow_next.svg);
 }
 
 .music__iframe {
@@ -263,7 +263,7 @@ h2 {
 }
 
 .bio {
-  background-image: url(/img/bio__background.png);
+  background-image: url(../img/bio__background.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -335,13 +335,13 @@ h2 {
   left: 2px;
   height: 48px;
   width: 48px;
-  background-image: url(/img/play-icon1.svg);
+  background-image: url(../img/play-icon1.svg);
   background-size: cover;
 }
 
 .music__button-img:hover,
 .video__button:hover {
-  background-image: url(/img/play-icon2.svg);
+  background-image: url(../img/play-icon2.svg);
 }
 
 .video__title {
@@ -398,7 +398,7 @@ i {
   }
 
   .bio {
-    background-image: url(img/bio__small.jpg);
+    background-image: url(../img/bio__small.jpg);
     background-position: right;
     text-shadow: 
       -1px -1px 0 var(--grey),  
@@ -463,11 +463,11 @@ i {
   }
 
   .header {
-    background-image: url(img/header__small.jpg);
+    background-image: url(../img/header__small.jpg);
   }
 
   .bio {
-    background-image: url(img/bio__5xs.jpg);
+    background-image: url(../img/bio__5xs.jpg);
     background-position: center;
     align-items: center;
   }
@@ -484,6 +484,5 @@ i {
     display: flex;
   }
   
-
   
 }

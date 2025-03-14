@@ -138,11 +138,11 @@ document.addEventListener("DOMContentLoaded", function () {
         sliderWrapper.addEventListener("touchend", () => {
             if (window.innerWidth < 768) {
                 let diff = startX - endX;
-                if (Math.abs(diff) > 50) { // Если свайп длиннее 50px
+                if (Math.abs(diff) > 50) {
                     if (diff > 0) {
-                        nextSlide(); // Листаем вперёд
+                        nextSlide();
                     } else {
-                        prevSlide(); // Листаем назад
+                        prevSlide();
                     }
                 }
             }
