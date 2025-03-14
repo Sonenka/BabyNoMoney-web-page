@@ -20,10 +20,10 @@
                     <a href="#music" class="menu__a">Music</a>
                 </li>
                 <li class="menu__li">
-                    <a href="#videos" class="menu__a">Videos</a>
+                    <a href="#bio" class="menu__a">About</a>
                 </li>
                 <li class="menu__li">
-                    <a href="#bio" class="menu__a">About</a>
+                    <a href="#videos" class="menu__a">Videos</a>
                 </li>
             </ul>
         </nav>
@@ -40,13 +40,14 @@
                     <button id="music__button_next" class="slider__button music__button_next" aria-label="Next Slide"></button>
                 </div>
             </div>
-            <button class="music__button button">LISTEN NOW</button>
         </section>
 
         <section class="bio section" id="bio">
             <div class="bio__info">
                 <h2 class="bio__h2">Want to know more?</h2>
-                <button class="button bio__button">Read bio</button>
+                <div class="bio__button-wrapper">
+                    <button class="button bio__button" onclick='window.open("https://en.wikipedia.org/wiki/Bbno$", "_blank")'>Read bio</button>
+                </div>
             </div>
         </section>
 
@@ -54,12 +55,15 @@
             <h2 class="video__h2 h2">Videos</h2>
             <div class="video__slider">
                 <div class="slider">
-                    <button id="video__button_prev" class="slider__button video__button_prev video__button" aria-label="Previous Slide"></button>
+                    <button id="video__button_prev" class="slider__button video__slider-button video__button_prev video__controll_prev" aria-label="Previous Slide"></button>
                     <div id="video__wrapper" class="video__wrapper" aria-live="polite"></div>
-                    <button id="video__button_next" class="slider__button video__button_next video__button" aria-label="Next Slide"></button>
+                    <button id="video__button_next" class="slider__button video__slider-button video__button_next video__controll_next" aria-label="Next Slide"></button>
+                </div>
+                <div class="video__mobile-controll">
+                    <button id="video__mobile_prev" class="video__mobile_prev video__mobile video__controll_prev" aria-label="Previous Slide"></button>
+                    <button id="video__mobile_next" class="video__mobile_next video__mobile video__controll_next" aria-label="Next Slide"></button>
                 </div>
             </div>
-            <button class="button video__button_more">Watch more</button>
         </section>  
     </main>
 
@@ -82,5 +86,3 @@
     </footer>
 
     <script type="module" src="script.js"></script>
-</body>
-</html>

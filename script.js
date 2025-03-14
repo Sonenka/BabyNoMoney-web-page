@@ -22,10 +22,30 @@ document.addEventListener("DOMContentLoaded", function () {
             slideDiv.classList.add("music__item");
             slideDiv.innerHTML = `
                 <div class="music__song">
-                  <img src="${songs[slideIndex].image}" alt="Slide" class="music__image">
+                    <div class="music__song-wrapper">  
+                        <img src="${songs[slideIndex].image}" alt="Slide" class="music__image">
+                        <button class="music__button-img"></button>
+                    </div>
                   <p class="music__title">${songs[slideIndex].text}</p>
                 </div>
             `;
+
+            // Обработчик клика по обложке
+            slideDiv.querySelector(".music__song").addEventListener("click", function () {
+                slideDiv.innerHTML = `
+                    <iframe 
+                        class="music__iframe" 
+                        width="100%" 
+                        height="400" 
+                        src="${songs[slideIndex].link}" 
+                        frameborder="0" 
+                        allow="autoplay" 
+                        loading="lazy">
+                    </iframe>
+                    <p class="music__title">${songs[slideIndex].text}</p>
+                `;
+            });
+
             sliderWrapper.appendChild(slideDiv);
         }
     }
@@ -47,8 +67,8 @@ document.addEventListener("DOMContentLoaded", function () {
     let index = 0;
     const slidesToShow = 1;
     const sliderWrapper = document.getElementById("video__wrapper");
-    const prevButton = document.getElementById("video__button_prev");
-    const nextButton = document.getElementById("video__button_next");
+    const prevButtons = document.querySelectorAll(".video__controll_prev"); // Объединяем все кнопки "назад"
+    const nextButtons = document.querySelectorAll(".video__controll_next"); // Объединяем все кнопки "вперёд"
 
     function updateSlides() {
         sliderWrapper.innerHTML = "";
@@ -77,36 +97,58 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    prevButton.addEventListener("click", function () {
+    // Функция переключения слайдов
+    function prevSlide() {
         index = (index - slidesToShow + videos.length) % videos.length;
         updateSlides();
-    });
+    }
 
-    nextButton.addEventListener("click", function () {
+    function nextSlide() {
         index = (index + slidesToShow) % videos.length;
         updateSlides();
+    }
+
+    // Навешиваем обработчики на все кнопки "назад"
+    prevButtons.forEach(button => {
+        button.addEventListener("click", prevSlide);
     });
 
+    // Навешиваем обработчики на все кнопки "вперёд"
+    nextButtons.forEach(button => {
+        button.addEventListener("click", nextSlide);
+    });
+
+    // --- Добавляем поддержку свайпов только на мобильных экранах ---
+    function addSwipeSupport() {
+        let startX = 0;
+        let endX = 0;
+
+        sliderWrapper.addEventListener("touchstart", (e) => {
+            if (window.innerWidth < 768) {
+                startX = e.touches[0].clientX;
+            }
+        });
+
+        sliderWrapper.addEventListener("touchmove", (e) => {
+            if (window.innerWidth < 768) {
+                endX = e.touches[0].clientX;
+            }
+        });
+
+        sliderWrapper.addEventListener("touchend", () => {
+            if (window.innerWidth < 768) {
+                let diff = startX - endX;
+                if (Math.abs(diff) > 50) { // Если свайп длиннее 50px
+                    if (diff > 0) {
+                        nextSlide(); // Листаем вперёд
+                    } else {
+                        prevSlide(); // Листаем назад
+                    }
+                }
+            }
+        });
+    }
+
+    addSwipeSupport();
     updateSlides();
 });
-
-// let currentSection = 0;
-// const sections = document.querySelectorAll('.section');
-// let isScrolling = false; 
-
-// window.addEventListener('wheel', (e) => {
-//     if (isScrolling) return;
-//     isScrolling = true;
-
-//     if (e.deltaY > 0 && currentSection < sections.length - 1) {
-//         currentSection++;
-//     } else if (e.deltaY < 0 && currentSection > 0) {
-//         currentSection--;
-//     }
-
-//     sections[currentSection].scrollIntoView({ behavior: 'smooth' });
-
-//     setTimeout(() => {
-//         isScrolling = false; // Разрешаем следующий скролл через 800 мс
-//     }, 800);
-// });
