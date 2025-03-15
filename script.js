@@ -3,13 +3,13 @@ import { videos } from "./slides.js";
 
 document.addEventListener("DOMContentLoaded", function () {
     let index = 0;
-    const slidesToShow = getComputedStyle(document.documentElement).getPropertyValue('--music-columns').trim();
+    const slidesToShow = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--music-columns').trim(), 10);
     console.log(slidesToShow);
     const sliderWrapper = document.getElementById("music__wrapper");
     const prevButtons = document.querySelectorAll(".music__controll_prev");
     const nextButtons = document.querySelectorAll(".music__controll_next");
 
-    if (!sliderWrapper || !prevButtons || !nextButtons || !songs.length) {
+    if (!sliderWrapper || !prevButtons.length || !nextButtons.length || !songs.length) {
         console.error("Slider elements or slides data not found!");
         return;
     }
@@ -61,17 +61,6 @@ document.addEventListener("DOMContentLoaded", function () {
         updateSlides();
     }
 
-    // Навешиваем обработчики на кнопки "назад" и "вперёд"
-    function prevSlide() {
-        index = (index - slidesToShow + videos.length) % videos.length;
-        updateSlides();
-    }
-
-    function nextSlide() {
-        index = (index + slidesToShow) % videos.length;
-        updateSlides();
-    }
-
     // Навешиваем обработчики на все кнопки "назад"
     prevButtons.forEach(button => {
         button.addEventListener("click", prevSlide);
@@ -81,7 +70,6 @@ document.addEventListener("DOMContentLoaded", function () {
     nextButtons.forEach(button => {
         button.addEventListener("click", nextSlide);
     });
-
 
     // --- Добавляем поддержку свайпов только на мобильных экранах ---
     function addSwipeSupport() {
