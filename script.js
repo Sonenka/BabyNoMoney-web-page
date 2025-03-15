@@ -6,12 +6,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const slidesToShow = getComputedStyle(document.documentElement).getPropertyValue('--music-columns').trim();
     console.log(slidesToShow);
     const sliderWrapper = document.getElementById("music__wrapper");
-    const prevButton = document.getElementById("music__button_prev");
-    const nextButton = document.getElementById("music__button_next");
+    const prevButtons = document.querySelectorAll(".music__controll_prev");
+    const nextButtons = document.querySelectorAll(".music__controll_next");
 
-    if (!sliderWrapper || !prevButton || !nextButton || !songs.length) {
-      console.error("Slider elements or slides data not found!");
-      return;
+    if (!sliderWrapper || !prevButtons || !nextButtons || !songs.length) {
+        console.error("Slider elements or slides data not found!");
+        return;
     }
 
     function updateSlides() {
@@ -50,16 +50,80 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    prevButton.addEventListener("click", function () {
+    // Функция переключения слайдов
+    function prevSlide() {
         index = (index - slidesToShow + songs.length) % songs.length;
         updateSlides();
-    });
+    }
 
-    nextButton.addEventListener("click", function () {
+    function nextSlide() {
         index = (index + slidesToShow) % songs.length;
         updateSlides();
+    }
+
+    // Навешиваем обработчики на кнопки "назад" и "вперёд"
+    function prevSlide() {
+        index = (index - slidesToShow + videos.length) % videos.length;
+        updateSlides();
+    }
+
+    function nextSlide() {
+        index = (index + slidesToShow) % videos.length;
+        updateSlides();
+    }
+
+    // Навешиваем обработчики на все кнопки "назад"
+    prevButtons.forEach(button => {
+        button.addEventListener("click", prevSlide);
     });
 
+    // Навешиваем обработчики на все кнопки "вперёд"
+    nextButtons.forEach(button => {
+        button.addEventListener("click", nextSlide);
+    });
+
+
+    // --- Добавляем поддержку свайпов только на мобильных экранах ---
+    function addSwipeSupport() {
+        let startX = 0;
+        let startY = 0;
+        let endX = 0;
+        let endY = 0;
+
+        sliderWrapper.addEventListener("touchstart", (e) => {
+            if (window.innerWidth < 768) {
+                startX = e.touches[0].clientX;
+                startY = e.touches[0].clientY; // Запоминаем начальную позицию по Y
+            }
+        });
+
+        sliderWrapper.addEventListener("touchmove", (e) => {
+            if (window.innerWidth < 768) {
+                endX = e.touches[0].clientX;
+                endY = e.touches[0].clientY; // Запоминаем конечную позицию по Y
+            }
+        });
+
+        sliderWrapper.addEventListener("touchend", () => {
+            if (window.innerWidth < 768) {
+                let diffX = startX - endX; // Разница по X
+                let diffY = startY - endY; // Разница по Y
+
+                // Проверяем, что свайп был преимущественно горизонтальным
+                if (Math.abs(diffX) > Math.abs(diffY)) {
+                    if (Math.abs(diffX) > 50) { // Минимальная дистанция для свайпа
+                        if (diffX > 0) {
+                            nextSlide(); // Свайп влево
+                        } else {
+                            prevSlide(); // Свайп вправо
+                        }
+                    }
+                }
+            }
+        });
+    }
+
+    addSwipeSupport();
     updateSlides();
 });
 
@@ -121,28 +185,37 @@ document.addEventListener("DOMContentLoaded", function () {
     // --- Добавляем поддержку свайпов только на мобильных экранах ---
     function addSwipeSupport() {
         let startX = 0;
+        let startY = 0;
         let endX = 0;
+        let endY = 0;
 
         sliderWrapper.addEventListener("touchstart", (e) => {
             if (window.innerWidth < 768) {
                 startX = e.touches[0].clientX;
+                startY = e.touches[0].clientY; // Запоминаем начальную позицию по Y
             }
         });
 
         sliderWrapper.addEventListener("touchmove", (e) => {
             if (window.innerWidth < 768) {
                 endX = e.touches[0].clientX;
+                endY = e.touches[0].clientY; // Запоминаем конечную позицию по Y
             }
         });
 
         sliderWrapper.addEventListener("touchend", () => {
             if (window.innerWidth < 768) {
-                let diff = startX - endX;
-                if (Math.abs(diff) > 50) {
-                    if (diff > 0) {
-                        nextSlide();
-                    } else {
-                        prevSlide();
+                let diffX = startX - endX; // Разница по X
+                let diffY = startY - endY; // Разница по Y
+
+                // Проверяем, что свайп был преимущественно горизонтальным
+                if (Math.abs(diffX) > Math.abs(diffY)) {
+                    if (Math.abs(diffX) > 50) { // Минимальная дистанция для свайпа
+                        if (diffX > 0) {
+                            nextSlide(); // Свайп влево
+                        } else {
+                            prevSlide(); // Свайп вправо
+                        }
                     }
                 }
             }
@@ -152,7 +225,6 @@ document.addEventListener("DOMContentLoaded", function () {
     addSwipeSupport();
     updateSlides();
 });
-
 
 document.addEventListener('DOMContentLoaded', function () {
     const toggleButton = document.querySelector('.menu__toggle');

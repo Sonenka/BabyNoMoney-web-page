@@ -48,6 +48,7 @@ body {
 a,
 a:visited {
   text-decoration: none;
+  color: var(--light-pink);
 }
 
 .h1 {
@@ -187,6 +188,8 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  gap: 30px;
 }
 
 .slider {
@@ -271,20 +274,24 @@ h2 {
   background-image: url(img/slider__button_next.svg);
 }
 
+.music__mobile-controll,
 .video__mobile-controll {
   display: none;
   gap: 30px;
 }
 
+.music__mobile,
 .video__mobile {
   width: 91px;
   height: 42px;
 }
 
+.music__mobile_prev,
 .video__mobile_prev {
   background-image: url(img/mobile_arrow_prev.svg);
 }
 
+.music__mobile_next,
 .video__mobile_next {
   background-image: url(img/mobile_arrow_next.svg);
 }
@@ -482,10 +489,12 @@ i {
     font-size: 80px;
   }
 
+  .music__slider-button,
   .video__slider-button {
     display: none;
   }
 
+  .music__mobile-controll,
   .video__mobile-controll {
     display: flex;
   }
