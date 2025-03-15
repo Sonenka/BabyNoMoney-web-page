@@ -42,9 +42,9 @@ body {
   background-color: var(--light-pink);
 }
 
-a,
-a:visited {
-  text-decoration: none;
+.footer__link,
+.footer__link:visited {
+  text-decoration: underline;
   color: var(--light-pink);
 }
 
@@ -52,6 +52,7 @@ a:visited {
   font-family: var(--secondary-font-family);
 }
 
+.button:active,
 .button {
   padding: 15px 30px;
   border: 5px var(--absolute-white) solid;
@@ -110,6 +111,7 @@ a:visited {
   height: 3px;
   background-color: var(--absolute-white);
   position: relative;
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .menu__icon::before,
@@ -131,6 +133,18 @@ a:visited {
   transform: translateY(8px);
 }
 
+.menu__toggle.active .menu__icon {
+  background-color: transparent;
+}
+
+.menu__toggle.active .menu__icon::before {
+  transform: translateY(0) rotate(45deg);
+}
+
+.menu__toggle.active .menu__icon::after {
+  transform: translateY(0) rotate(-45deg);
+}
+
 .menu__ul {
   display: flex;
   gap: 70px;
@@ -144,8 +158,11 @@ a:visited {
   font-weight: 700;
   font-size: 24px;
   text-transform: uppercase;
+  text-decoration: none;
   color: var(--absolute-white);
 }
+
+
 
 main {
   display: flex;
@@ -243,16 +260,6 @@ h2 {
   text-transform: uppercase;
   font-weight: 800;
   color: var(--brown);
-}
-
-.music__button {
-  border-color: var(--brown);
-  color: var(--brown);
-}
-
-.music__button:hover {
-  background-color: var(--brown);
-  color: var(--light-pink);
 }
 
 .slider__button {
@@ -370,6 +377,8 @@ h2 {
 
 .video__iframe {
   border-radius: 5px;
+  width: var(--video-width);
+  height: var(--video-height);
 }
 
 .video__button {
@@ -399,10 +408,6 @@ h2 {
 
 .video__title:hover {
   color: var(--light-pink);
-}
-
-.video__button_more {
-  display: none;
 }
 
 .footer {
@@ -464,6 +469,10 @@ i {
   .header__h1 {
     font-size: 96px; 
   }
+
+  h2 {
+    font-size: 48px;
+  }
 }
   
 
@@ -492,6 +501,12 @@ i {
   .video__mobile-controll {
     display: flex;
   }
+
+  .bio__button:active,
+  .bio__button:hover {
+    background-color: transparent;
+    color: var(--absolute-white);
+  }
 }
   
   
@@ -506,7 +521,13 @@ i {
 
   .video__item {
     width: min(var(--video-width), calc(100% - 40px));
-    height:min-content;
+    height: min-content;
+  }
+
+  .video__iframe {
+    width: 90vw;
+    height: auto;
+    aspect-ratio: 16 / 9;
   }
 }
 
@@ -525,6 +546,15 @@ i {
     background-image: url(img/bio__5xs.jpg);
     background-position: center;
     align-items: center;
+    text-shadow: none;
+  }
+
+  .bio__button {
+    text-shadow: none;
+  }
+
+  .bio__button-wrapper {
+    border: none;
   }
 
   .header__h1 {
@@ -560,6 +590,11 @@ i {
   .video__title {
     font-size: 24px;
   }
+
+  i,
+  .footer__copy {
+    font-size: 20px;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -568,7 +603,22 @@ i {
     height: auto;
   }
 
+  .music__title {
+    font-size: 24px;
+  }
+
   .video__title {
+    font-size: 16px;
+  }
+
+  .music__iframe {
+    width: 90vw;
+    height: auto;
+    aspect-ratio: 1 / 1;
+  }
+
+  i,
+  .footer__copy {
     font-size: 16px;
   }
 }

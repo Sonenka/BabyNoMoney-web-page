@@ -133,6 +133,11 @@ export const songs = [
 
 export const videos = [
     {
+        image: "img/covers/videos/antidepressants.jpg",
+        video: "https://www.youtube.com/embed/FmlGo1KY2jE?si=QC2i4LtNVgkCXvKY",
+        title: "antidepressants "
+    },
+    {
         image: "img/covers/videos/nursery.jpg",
         video: "https://www.youtube.com/embed/NcQRJflRstw?si=yJ1qtnKMKt2w2hxq",
         title: "nursery"
@@ -246,10 +251,5 @@ export const videos = [
         image: "img/covers/videos/check.jpg",
         video: "https://www.youtube.com/embed/iSyX-aGYHYk?si=aG6QjoplJ1TDGimD",
         title: "check"
-    },
-    {
-        image: "img/covers/videos/antidepressants.jpg",
-        video: "https://www.youtube.com/embed/FmlGo1KY2jE?si=QC2i4LtNVgkCXvKY",
-        title: "antidepressants "
     }
 ];

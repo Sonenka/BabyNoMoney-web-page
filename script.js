@@ -125,7 +125,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             slideDiv.querySelector(".video__video").addEventListener("click", function () {
                 slideDiv.innerHTML = `
-                    <iframe class="video__iframe" width="${videoWidth}" height="${videoHeight}" 
+                    <iframe class="video__iframe" 
                         src="${videos[slideIndex].video}?autoplay=true" 
                         frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
                         encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
@@ -199,4 +199,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
 document.getElementById('bio__button').addEventListener('click', () => {
     window.open("https://en.wikipedia.org/wiki/Bbno$", "_blank");
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.querySelector(".menu__toggle");
+
+    menuToggle.addEventListener("click", function () {
+        this.classList.toggle("active");
+    });
 });
