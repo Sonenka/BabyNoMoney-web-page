@@ -349,7 +349,6 @@ h2 {
   gap: 20px;
 }
 
-
 .video__item {
   width: var(--video-width);
   height: var(--video-height);
@@ -366,6 +365,8 @@ h2 {
 .video__wrapper {
   display: flex;
   justify-content: center;
+  width: var(--video-width);
+  height: var(--video-height);
 }
 
 .video__image {
@@ -469,10 +470,6 @@ i {
   .header__h1 {
     font-size: 96px; 
   }
-
-  h2 {
-    font-size: 48px;
-  }
 }
   
 
@@ -507,6 +504,10 @@ i {
     background-color: transparent;
     color: var(--absolute-white);
   }
+
+  h2 {
+    font-size: 72px;
+  }
 }
   
   
@@ -519,9 +520,11 @@ i {
     font-size: 64px;
   }
 
+  .video__wrapper,
   .video__item {
     width: min(var(--video-width), calc(100% - 40px));
-    height: min-content;
+    height: auto;
+    aspect-ratio: 16 / 9;
   }
 
   .video__iframe {
