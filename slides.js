@@ -133,7 +133,7 @@ export const songs = [
 
 export const videos = [
     {
-        image: "https://img.youtube.com/vi/NcQRJflRstw/maxresdefault.jpg",
+        image: "img/covers/videos/nursery.jpg",
         video: "https://www.youtube.com/embed/NcQRJflRstw?si=yJ1qtnKMKt2w2hxq",
         title: "nursery"
     },

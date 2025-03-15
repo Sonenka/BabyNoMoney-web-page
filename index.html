@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BBNo$</title>
+    <title>BBNo$ fan page</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link href="//fonts.googleapis.com/earlyaccess/jejuhallasan.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="shortcut icon" href="/img/favicon.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="img/favicon.jpg" type="image/x-icon">
+    <meta name="description" content="Official website of BBNo$. Listen to music, watch videos, and learn more about the artist.">
 </head>
 <body>
     <header class="header section">
@@ -18,7 +19,7 @@
             </button>
             <ul class="menu__ul">
                 <li class="menu__li">
-                    <a href="#" class="menu__a" aria-current="page">Home</a>
+                    <a href="#" class="menu__a">Home</a>
                 </li>
                 <li class="menu__li">
                     <a href="#music" class="menu__a">Music</a>
@@ -54,7 +55,7 @@
             <div class="bio__info">
                 <h2 class="bio__h2">Want to know more?</h2>
                 <div class="bio__button-wrapper">
-                    <button class="button bio__button" onclick='window.open("https://en.wikipedia.org/wiki/Bbno$", "_blank")'>Read bio</button>
+                    <button class="button bio__button" id="bio__button">Read bio</button>
                 </div>
             </div>
         </section>
@@ -64,7 +65,7 @@
             <div class="video__slider">
                 <div class="slider">
                     <button id="video__button_prev" class="slider__button video__slider-button video__button_prev video__controll_prev" aria-label="Previous Slide"></button>
-                    <div id="video__wrapper" class="video__wrapper"></div>
+                    <div id="video__wrapper" class="video__wrapper" aria-live="polite"></div>
                     <button id="video__button_next" class="slider__button video__slider-button video__button_next video__controll_next" aria-label="Next Slide"></button>
                 </div>
                 <div class="video__mobile-controll">
@@ -77,16 +78,16 @@
 
     <footer class="footer section">
         <div class="links">
-            <a href="https://www.youtube.com/channel/UCC8FSfSnbjiZ6vGr68ZLtzg" aria-label="YouTube">
+            <a href="https://www.youtube.com/channel/UCC8FSfSnbjiZ6vGr68ZLtzg" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
                 <i class="fa-brands fa-youtube"></i>
             </a>
-            <a href="https://www.instagram.com/bbnomula/" aria-label="Instagram">
+            <a href="https://www.instagram.com/bbnomula/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                 <i class="fa-brands fa-instagram"></i>
             </a>
-            <a href="https://www.facebook.com/bbnomula" aria-label="Facebook">
+            <a href="https://www.facebook.com/bbnomula" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                 <i class="fa-brands fa-facebook"></i>
             </a>
-            <a href="https://www.tiktok.com/@bbnotiktok?lang=en" aria-label="TikTok">
+            <a href="https://www.tiktok.com/@bbnotiktok?lang=en" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
                 <i class="fa-brands fa-tiktok"></i>
             </a>
         </div>
