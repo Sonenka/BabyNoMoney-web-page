@@ -225,17 +225,14 @@ h2 {
   align-items: center;
   text-align: center;
   gap: 20px;
-}
-
-.music__song {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  cursor: pointer;
+  width: 400px;
 }
 
 .music__song-wrapper {
   position: relative;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
 }
 
 .music__button-img {
@@ -366,6 +363,9 @@ h2 {
   aspect-ratio: 16 / 9;
   border-radius: 5px;
   position: relative;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
 }
 
 .video__iframe {
@@ -595,8 +595,13 @@ i {
 }
 
 @media screen and (max-width: 480px) {
-  .music__image {
-    width: min(400px, calc(100% - 40px));
+  .music__item {
+    width: 400px;
+  }
+
+  .music__song-wrapper {
+    width: 100%;
+    aspect-ratio: 1 / 1;
     height: auto;
   }
 
