@@ -110,21 +110,20 @@ document.addEventListener("DOMContentLoaded", function () {
         sliderWrapper.innerHTML = "";
         for (let i = 0; i < slidesToShow; i++) {
             const slideIndex = (index + i) % videos.length;
-            const slideDiv = document.createElement("div");
-            const videoWidth = getComputedStyle(document.documentElement).getPropertyValue('--video-width').trim();
-            const videoHeight = getComputedStyle(document.documentElement).getPropertyValue('--video-height').trim();
-            slideDiv.classList.add("video__item");
-
-            slideDiv.innerHTML = `
-                <div class="video__video">
-                    <img src="${videos[slideIndex].image}" alt="Thumbnail" class="video__image">
-                    <button class="video__button"></button>
-                    <p class="video__title">${videos[slideIndex].title}</p>
-                </div>
+            
+            sliderWrapper.style.backgroundImage = `url('${videos[slideIndex].image}')`;
+            sliderWrapper.style.backgroundSize = "cover";
+            sliderWrapper.style.backgroundPosition = "center";
+            sliderWrapper.style.position = "relative";
+            sliderWrapper.style.cursor = "pointer";
+    
+            sliderWrapper.innerHTML = `
+                <button class="video__button"></button>
+                <p class="video__title">${videos[slideIndex].title}</p>
             `;
-
-            slideDiv.querySelector(".video__video").addEventListener("click", function () {
-                slideDiv.innerHTML = `
+    
+            sliderWrapper.addEventListener("click", function () {
+                sliderWrapper.innerHTML = `
                     <iframe class="video__iframe" 
                         src="${videos[slideIndex].video}?autoplay=true" 
                         frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
@@ -132,8 +131,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     </iframe>
                 `;
             });
-
-            sliderWrapper.appendChild(slideDiv);
+    
         }
     }
 
