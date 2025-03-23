@@ -1,0 +1,31 @@
+.footer {
+  height: 80px;
+  font-size: 24px;
+  background-color: var(--brown);
+  color: var(--light-pink);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+}
+
+.fa-brands {
+  color: var(--light-pink);
+  font-size: 32px;
+}
+
+.links {
+  display: flex;
+  gap: 10px;
+}
+
+.footer__copy {
+  text-align: right;
+}
+
+.footer__link,
+.footer__link:visited {
+  text-decoration: underline;
+  color: var(--light-pink);
+}

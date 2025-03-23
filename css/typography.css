@@ -1,0 +1,48 @@
+.h1 {
+    font-family: var(--secondary-font-family);
+}
+
+.h2 {
+font-family: var(--secondary-font-family);
+font-size: 96px;
+text-align: center;
+}
+
+.header__h1 {
+    font-size: 128px;
+    text-align: center;
+}
+
+.music__h2 {
+    color: var(--brown);
+}
+
+.music__title {
+    text-align: center;
+    font-size: 32px;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: var(--brown);
+}
+
+.bio__h2 {
+    color: var(--absolute-white);
+}
+
+.video__h2 {
+    color: var(--brown);
+}
+
+.video__title {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 32px;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: var(--absolute-white);
+}
+
+.video__title:hover {
+    color: var(--light-pink);
+}

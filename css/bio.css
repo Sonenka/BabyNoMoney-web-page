@@ -1,0 +1,26 @@
+
+.bio {
+    background-image: url(../img/bio__background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    background-color: black;
+    background-attachment: fixed;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.bio__info {
+    width: 45%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+}
+
+.bio__button {
+    text-wrap: nowrap;
+}

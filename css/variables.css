@@ -1,0 +1,25 @@
+:root {
+  --primary-font-family: "Inter", sans-serif;
+  --secondary-font-family: 'jeju hallasan', sans-serif;
+  --light-pink: #FFEAF3;
+  --brown: #644C30;
+  --absolute-white: #ffffff;
+  --absolute-black: #000000;
+  --grey: #383838;
+
+  --music-columns: 3;
+
+  --video-height: 540px;
+  --video-width: 960px;
+}
+
+html,
+body {
+  font-family: var(--primary-font-family);
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--light-pink);
+}
