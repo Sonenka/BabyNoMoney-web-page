@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="shortcut icon" href="img/favicon.jpg" type="image/x-icon">
     <meta name="description" content="Official website of BBNo$. Listen to music, watch videos, and learn more about the artist.">
+    <script type="module" src="script.js" defer></script>
 </head>
 <body>
     <header class="header section">
@@ -41,7 +42,7 @@
             <div class="music__slider">
                 <div class="slider">
                     <button id="music__button_prev" class="slider__button music__button_prev music__slider-button music__controll_prev" aria-label="Previous Slide"></button>
-                    <div id="music__wrapper" class="music__wrapper" aria-live="polite"></div>
+                    <div class="music__wrapper" aria-live="polite"></div>
                     <button id="music__button_next" class="slider__button music__button_next music__slider-button music__controll_next" aria-label="Next Slide"></button>
                 </div>
                 <div class="music__mobile-controll">
@@ -55,7 +56,7 @@
             <div class="bio__info">
                 <h2 class="bio__h2">Want to know more?</h2>
                 <div class="bio__button-wrapper">
-                    <button class="button bio__button" id="bio__button">Read bio</button>
+                    <button class="button bio__button">Read bio</button>
                 </div>
             </div>
         </section>
@@ -64,7 +65,7 @@
             <h2 class="video__h2 h2">Videos</h2>
             <di class="video__slider">
                 <button id="video__button_prev" class="slider__button video__slider-button video__button_prev video__controll_prev" aria-label="Previous Slide"></button>
-                <div id="video__wrapper" class="video__wrapper" aria-live="polite"></div>
+                <div class="video__wrapper" aria-live="polite"></div>
                 <button id="video__button_next" class="slider__button video__slider-button video__button_next video__controll_next" aria-label="Next Slide"></button>
 
                 <div class="video__mobile-controll">
@@ -92,5 +93,5 @@
         </div>
         <div class="footer__copy">Made by <a class="footer__link" href="https://github.com/Sonenka">Sonenka</a></div>
     </footer>
-
-    <script type="module" src="script.js"></script>
+</body>
+</html>
